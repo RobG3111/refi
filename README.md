@@ -14,13 +14,14 @@ translates to
 
 In this example wild means a wildcard character, some{\`a\`} means one of more of the a character and digit means a digit character. In REFI strings are enclosed in back ticks and there are no escape characters. To denote the backtick character use the backtick token. Consecutive strings are allowed so you can easily split long strings over multipe lines by closing the string on one line and starting another one on the next line.
 
-REFI is in the very early stages of development so only some the tokens are defined in the grammar and implemented. REFI uses an Antlr4 grammar to create the translator. At the moment there is only a Java implemetation because I'm an old Java programmer.  
+REFI is in the very early stages of development so only some the tokens are defined in the grammar and implemented. REFI uses an Antlr4 grammar to create the translator. At the moment there is only a Java implemetation because I'm an old Java programmer. 
 
 Grammar
-|---------------------------------------|-------------|----------------------------------------------------------------------------------------------------------------------------|
+
+
 | Keyword                               | Implemented | Reg ex feature                                                                                                             |
 |---------------------------------------|-------------|----------------------------------------------------------------------------------------------------------------------------|
-| `x`                                   | yes         | x The character x                                                                                                          |
+| \`x\`                                   | yes         | x The character x                                                                                                          |
 | octal{nnn}                            | yes         | \0n The character with octal value 0n (0 <= n <= 7)                                                                        |
 |                                       |             | \0nn The character with octal value 0nn (0 <= n <= 7)                                                                      |
 |                                       |             | \0mnn The character with octal value 0mnn (0 <= m <= 3, 0 <= n <= 7)                                                       |
@@ -34,11 +35,11 @@ Grammar
 | bell                                  | yes         | \a The alert (bell) character ('\u0007')                                                                                   |
 | escape                                | yes         | \e The escape character ('\u001B')                                                                                         |
 | ctrl{x}                               | yes         | \cx The control character corresponding to x                                                                               |
-| backtick                              | yes         | backtick character `                                                                                                       |
+| backtick                              | yes         | backtick character \`                                                                                                       |
 |                                       |             |                                                                                                                            |
-| either{`a`, `b`, `c`}                 | yes         | [abc] a, b, or c (simple class)                                                                                            |
-| not{`a`, `b`, `c`}                    | yes         | [^abc] Any character except a, b, or c (negation)                                                                          |
-| range{`a`:`z`, `A`:`Z`}               | yes         | [a-zA-Z] a through z or A through Z, inclusive (range)                                                                     |
+| either{\`a\`, \`b\`, \`c\`}                 | yes         | [abc] a, b, or c (simple class)                                                                                            |
+| not{\`a\`, \`b\`, \`c\`}                    | yes         | [^abc] Any character except a, b, or c (negation)                                                                          |
+| range{\`a\`:\`z\`, \`A\`:\`Z\`}               | yes         | [a-zA-Z] a through z or A through Z, inclusive (range)                                                                     |
 | union{r1, r2}                         |             | [a-d[m-p]] a through d, or m through p: [a-dm-p] (union)                                                                   |
 | intersect{r1, r2}                     |             | [a-z&&[def]] d, e, or f (intersection)                                                                                     |
 |                                       |             | [a-z&&[^bc]] a through z, except for b and c: [ad-z] (subtraction)                                                         |
@@ -62,7 +63,7 @@ Grammar
 | alphabetic                            |             | \p{Alpha} An alphabetic character:[\p{Lower}\p{Upper}]                                                                     |
 | decimal                               |             | \p{Digit} A decimal digit: [0-9]                                                                                           |
 | alphanumeric                          |             | \p{Alnum} An alphanumeric character:[\p{Alpha}\p{Digit}]                                                                   |
-| punct                                 |             | \p{Punct} Punctuation: One of !"#$%&'  *+,-./:<=>?@[\]^_`{\|}                                                              |
+| punct                                 |             | \p{Punct} Punctuation: One of !"#$%&'  *+,-./:<=>?@[\]^_\`{\|}                                                              |
 | visible                               |             | \p{Graph} A visible character: [\p{Alnum}\p{Punct}]                                                                        |
 | printable                             |             | \p{Print} A printable character: [\p{Graph}\x20]                                                                           |
 | blank                                 |             | \p{Blank} A space or a tab: [ \t]                                                                                          |
@@ -111,8 +112,8 @@ Grammar
 | atleast{x, n, pos}                    |             | X{n,}+ X, at least n times                                                                                                 |
 | atleast{x, n, m, pos}                 |             | X{n,m}+ X, at least n but not more than m times                                                                            |
 |                                       |             |                                                                                                                            |
-| `x` `y`                               |             | XY X followed by Y                                                                                                         |
-| or{`x` \|  `y`}                       |             | X\|Y Either X or Y                                                                                                         |
+| \`x\` \`y\`                               |             | XY X followed by Y                                                                                                         |
+| or{\`x\` \|  \`y\`}                       |             | X\|Y Either X or Y                                                                                                         |
 | capture{x}                            |             | (X) X, as a capturing group                                                                                                |
 | capture{x, "name"}                    |             | (?<name>X) X, as a named-capturing group                                                                                   |
 |                                       |             |                                                                                                                            |
@@ -147,9 +148,9 @@ Grammar
 |                                       |             |                                                                                                                            |
 | Examples                              |             |                                                                                                                            |
 |                                       |             |                                                                                                                            |
-|                                       |             | bol capture( somespace `cat` somespace ) eol ->   ^( +cat +)$                                                              |
-|                                       |             | caseins(`F`) `red`                                  ->   F\|fred                                                           |
-|                                       |             | `F` or `f` `red`                                    ->   F\|fred                                                           |
+|                                       |             | bol capture( somespace \`cat\` somespace ) eol ->   ^( +cat +)$                                                              |
+|                                       |             | caseins(\`F\`) \`red\`                                  ->   F\|fred                                                           |
+|                                       |             | \`F\` or \`f\` \`red\`                                    ->   F\|fred                                                           |
 |                                       |             | some(digit)                                         ->   [0-9]+                                                            |
-|                                       |             | some(range(`0`:`9`))                                ->   [0-9]+                                                            |
+|                                       |             | some(range(\`0\`:\`9\`))                                ->   [0-9]+                                                            |
 |                                       |             |                                                                                                                            |

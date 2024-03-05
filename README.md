@@ -114,8 +114,8 @@ Grammar
 |                                       |             |                                                                                                                            |
 | \`x\` \`y\`                               |             | XY X followed by Y                                                                                                         |
 | or{\`x\` \|  \`y\`}                       |             | X\|Y Either X or Y                                                                                                         |
-| capture{x}                            |             | (X) X, as a capturing group                                                                                                |
-| capture{x, "name"}                    |             | (?<name>X) X, as a named-capturing group                                                                                   |
+| capture{x}                            | yes | (X) X, as a capturing group                                                                                                |
+| capture{x, "name"}                    | yes           | (?<name>X) X, as a named-capturing group                                                                                   |
 |                                       |             |                                                                                                                            |
 | group{n}                              |             | \n Whatever the nth capturing group matched                                                                                |
 | group{"name"}                         |             | \k<name> Whatever the named-capturing group "name" matched                                                                 |

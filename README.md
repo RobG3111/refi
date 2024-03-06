@@ -99,18 +99,18 @@ Grammar
 | atleast{x, n, m}                      |             | X{n,m} X, at least n but not more than m times                                                                             |
 |                                       |             |                                                                                                                            |
 | optional{x, reluct}                   |             | X?? X, once or not at all                                                                                                  |
-| any{x, rel}                           |             | X*? X, zero or more times                                                                                                  |
-| some{x, rel}                          |             | X+? X, one or more times                                                                                                   |
-| exactly{x, n, rel}                    |             | X{n}? X, exactly n times                                                                                                   |
-| atleast{x, n, rel}                    |             | X{n,}? X, at least n times                                                                                                 |
-| atleast{x, n, m, rel}                 |             | X{n,m}? X, at least n but not more than m times                                                                            |
+| any{x, reluct}                           |             | X*? X, zero or more times                                                                                                  |
+| some{x, reluct}                          |             | X+? X, one or more times                                                                                                   |
+| exactly{x, n, reluct}                    |             | X{n}? X, exactly n times                                                                                                   |
+| atleast{x, n, reluct}                    |             | X{n,}? X, at least n times                                                                                                 |
+| atleast{x, n, m, reluct}                 |             | X{n,m}? X, at least n but not more than m times                                                                            |
 |                                       |             |                                                                                                                            |
 | optional{x, posses}                   |             | X?+ X, once or not at all                                                                                                  |
-| any{x, pos}                           |             | X*+ X, zero or more times                                                                                                  |
-| some{x, pos}                          |             | X++ X, one or more times                                                                                                   |
-| exactly{x, n, pos}                    |             | X{n}+ X, exactly n times                                                                                                   |
-| atleast{x, n, pos}                    |             | X{n,}+ X, at least n times                                                                                                 |
-| atleast{x, n, m, pos}                 |             | X{n,m}+ X, at least n but not more than m times                                                                            |
+| any{x, posses}                           |             | X*+ X, zero or more times                                                                                                  |
+| some{x, posses}                          |             | X++ X, one or more times                                                                                                   |
+| exactly{x, n, posses}                    |             | X{n}+ X, exactly n times                                                                                                   |
+| atleast{x, n, posses}                    |             | X{n,}+ X, at least n times                                                                                                 |
+| atleast{x, n, m, posses}                 |             | X{n,m}+ X, at least n but not more than m times                                                                            |
 |                                       |             |                                                                                                                            |
 | \`x\` \`y\`                               |             | XY X followed by Y                                                                                                         |
 | or{\`x\` \|  \`y\`}                       |             | X\|Y Either X or Y                                                                                                         |

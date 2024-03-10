@@ -152,5 +152,5 @@ Grammar
 |                                       |             | caseins{\`F\`} \`red\`                                  ->   F\|fred                                                           |
 |                                       |             | or{\`F\` \| \`f\`} \`red\`                                    ->   F\|fred                                                           |
 |                                       |             | some{digit}                                         ->   [0-9]+                                                            |
-|                                       |             | some{range{\`0\`:\`9\`}}                                ->   [0-9]+                                                            |
+|                                       |             | some{range{\`a\`:\`g\`}}                                ->   [a-g]+                                                            |
 |                                       |             |                                                                                                                            |

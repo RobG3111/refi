@@ -150,7 +150,7 @@ Grammar
 |                                       |             |                                                                                                                            |
 |                                       |             | bol capture{ somespace \`cat\` somespace } eol ->   ^( +cat +)$                                                              |
 |                                       |             | caseins{\`F\`} \`red\`                                  ->   F\|fred                                                           |
-|                                       |             | or{\`F\` | \`f\`} \`red\`                                    ->   F\|fred                                                           |
+|                                       |             | or{\`F\` \| \`f\`} \`red\`                                    ->   F\|fred                                                           |
 |                                       |             | some{digit}                                         ->   [0-9]+                                                            |
 |                                       |             | some{range{\`0\`:\`9\`}}                                ->   [0-9]+                                                            |
 |                                       |             |                                                                                                                            |

@@ -40,7 +40,7 @@ Grammar
 | either{\`a\`, \`b\`, \`c\`}                 | yes         | [abc] a, b, or c (simple class)                                                                                            |
 | not{\`a\`, \`b\`, \`c\`}                    | yes         | [^abc] Any character except a, b, or c (negation)                                                                          |
 | range{\`a\`:\`z\`, \`A\`:\`Z\`}               | yes         | [a-zA-Z] a through z or A through Z, inclusive (range)                                                                     |
-| union{r1, r2}                         |             | [a-d[m-p]] a through d, or m through p: [a-dm-p] (union)                                                                   |
+| union{\`a\`:\`d\`, \`m\`:\`p\`}                         |             | [a-d[m-p]] a through d, or m through p: [a-dm-p] (union)                                                                   |
 | intersect{r1, r2}                     |             | [a-z&&[def]] d, e, or f (intersection)                                                                                     |
 |                                       |             | [a-z&&[^bc]] a through z, except for b and c: [ad-z] (subtraction)                                                         |
 |                                       |             | [a-z&&[^m-p]] a through z, and not m through p: [a-lq-z](subtraction)                                                      |

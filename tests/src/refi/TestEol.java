@@ -1,7 +1,5 @@
 package refi;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.Test;
 
 class TestEol extends BaseTest
@@ -11,8 +9,8 @@ class TestEol extends BaseTest
     void testEolOnly()
     {
         Refi refi = new Refi();
-        String expression = refi.translate("`abc` eol");
-        assertEquals("abc$", expression);
+        String expression = refi.toRegEx("`abc` eol");
+        assertRegexIs("abc$", expression);
         assertRegexMatchesText(expression, "abc");
         assertRegexDoesntMatchText(expression, "abcd");
     }
@@ -21,8 +19,8 @@ class TestEol extends BaseTest
     void testBolAndEol()
     {
         Refi refi = new Refi();
-        String expression = refi.translate("bol `abc` eol");
-        assertEquals("^abc$", expression);
+        String expression = refi.toRegEx("bol `abc` eol");
+        assertRegexIs("^abc$", expression);
         assertRegexMatchesText(expression, "abc");
         assertRegexDoesntMatchText(expression, " abc ");
     }

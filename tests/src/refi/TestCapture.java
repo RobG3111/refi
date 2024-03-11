@@ -1,7 +1,5 @@
 package refi;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.Test;
 
 class TestCapture extends BaseTest
@@ -10,29 +8,29 @@ class TestCapture extends BaseTest
     @Test
     void testCapture()
     {
-        String expression = refi.translate("capture{ wild }");
-        assertEquals("(.)", expression);
+        String expression = refi.toRegEx("capture{ wild }");
+        assertRegexIs("(.)", expression);
     }
     
     @Test
     void testCaptureComplex()
     {
-        String expression = refi.translate("capture{ wild `123` }");
-        assertEquals("(.123)", expression);
+        String expression = refi.toRegEx("capture{ wild `123` }");
+        assertRegexIs("(.123)", expression);
     }
     
     @Test
     void testCaptureNamed()
     {
-        String expression = refi.translate("capture{ wild , `sam` }");
-        assertEquals("(?<sam>.)", expression);
+        String expression = refi.toRegEx("capture{ wild , `sam` }");
+        assertRegexIs("(?<sam>.)", expression);
     }
     
     @Test
     void testCaptureNamedComplex()
     {
-        String expression = refi.translate("capture{ wild `animals` , `sam` }");
-        assertEquals("(?<sam>.animals)", expression);
+        String expression = refi.toRegEx("capture{ wild `animals` , `sam` }");
+        assertRegexIs("(?<sam>.animals)", expression);
     }
 
 

@@ -40,13 +40,21 @@ VERTICAL    : '|';
 
 WS          : [ \r\n\t]+ -> skip;
 
+ALPHABETIC : 'alphabetic';
+
+ATLEAST : 'atleast';
+
 ANY : 'any';
 
 ANYWILD : 'anywild';
 
+ASCII : 'ascii';
+
 BACKTICK : 'backtick';
 
 BELL : 'bell';
+
+BETWEEN : 'between';
 
 BOL : 'bol';
 
@@ -60,6 +68,8 @@ COMMENTS : 'Comments';
 
 CTRL : 'ctrl';
 
+CURRENCY : 'currency';
+
 DIGIT : 'digit';
 
 DOTALL : 'DotAll'; 
@@ -70,14 +80,23 @@ ESCAPE : 'escape';
 
 EOL : 'eol';
 
+EXACTLY : 'exactly';
+
+FLAGGED : 'flagged';
+
 FLAGS : 'flags';
 
 FORMFEED : 'formfeed';
 
+GREEK : 'greek';
+
 HEX : 'hex';
 
-MULTILINE : 'MultiLine'; 
+LATIN : 'latin';
 
+LOWER : 'lower';
+
+MULTILINE : 'MultiLine'; 
 
 NEWLINE : 'newline';  
 
@@ -91,17 +110,31 @@ OPTIONAL : 'optional';
 
 OR : 'or';
 
+POSSES : 'posses';
+
 RANGE : 'range';
+
+RELUCT : 'reluct';
 
 RETURN : 'return';
 
 SOME : 'some';
 
+SOMESPACE : 'somespace';
+
 TAB : 'tab';
 
 UNICODECASE : 'UnicodeCase';
 
+UNICODECASEOFF : 'UnicodeCaseOff';
+
+UNION : 'union';
+
 UNIXLINES : 'UnixLines';
+
+UNIXLINESOFF : 'UnixLinesOff';
+
+UPPER : 'upper';
 
 WILD : 'wild';
 

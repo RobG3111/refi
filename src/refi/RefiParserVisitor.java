@@ -37,6 +37,18 @@ public interface RefiParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitLiteral_matcher(RefiParser.Literal_matcherContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link RefiParser#atleast}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAtleast(RefiParser.AtleastContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link RefiParser#between}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBetween(RefiParser.BetweenContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link RefiParser#capture_matcher}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -79,11 +91,29 @@ public interface RefiParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitExpr_param_matcher(RefiParser.Expr_param_matcherContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link RefiParser#exactly}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExactly(RefiParser.ExactlyContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link RefiParser#flagged}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFlagged(RefiParser.FlaggedContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link RefiParser#flags}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitFlags(RefiParser.FlagsContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link RefiParser#greek}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitGreek(RefiParser.GreekContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link RefiParser#hex_matcher}.
 	 * @param ctx the parse tree
@@ -121,23 +151,35 @@ public interface RefiParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitRange_matcher(RefiParser.Range_matcherContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link RefiParser#union}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitUnion(RefiParser.UnionContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link RefiParser#string}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitString(RefiParser.StringContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link RefiParser#function_matcher}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitFunction_matcher(RefiParser.Function_matcherContext ctx);
-	/**
 	 * Visit a parse tree produced by {@link RefiParser#matcher_name}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitMatcher_name(RefiParser.Matcher_nameContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link RefiParser#match_type}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitMatch_type(RefiParser.Match_typeContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link RefiParser#alphabetic}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAlphabetic(RefiParser.AlphabeticContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link RefiParser#anywild}.
 	 * @param ctx the parse tree
@@ -162,6 +204,12 @@ public interface RefiParserVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitBol(RefiParser.BolContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link RefiParser#currency}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCurrency(RefiParser.CurrencyContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link RefiParser#digit}.
 	 * @param ctx the parse tree
@@ -193,6 +241,12 @@ public interface RefiParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitFormfeed(RefiParser.FormfeedContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link RefiParser#latin}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitLatin(RefiParser.LatinContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link RefiParser#newline}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -204,6 +258,12 @@ public interface RefiParserVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitReturn(RefiParser.ReturnContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link RefiParser#somespace}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitSomespace(RefiParser.SomespaceContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link RefiParser#tab}.
 	 * @param ctx the parse tree
@@ -217,11 +277,29 @@ public interface RefiParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitUnicodecase(RefiParser.UnicodecaseContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link RefiParser#unicodecaseoff}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitUnicodecaseoff(RefiParser.UnicodecaseoffContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link RefiParser#unixlines}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitUnixlines(RefiParser.UnixlinesContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link RefiParser#unixlinesoff}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitUnixlinesoff(RefiParser.UnixlinesoffContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link RefiParser#upper}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitUpper(RefiParser.UpperContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link RefiParser#wild}.
 	 * @param ctx the parse tree

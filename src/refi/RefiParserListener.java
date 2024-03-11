@@ -50,6 +50,26 @@ public interface RefiParserListener extends ParseTreeListener {
 	 */
 	void exitLiteral_matcher(RefiParser.Literal_matcherContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link RefiParser#atleast}.
+	 * @param ctx the parse tree
+	 */
+	void enterAtleast(RefiParser.AtleastContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link RefiParser#atleast}.
+	 * @param ctx the parse tree
+	 */
+	void exitAtleast(RefiParser.AtleastContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link RefiParser#between}.
+	 * @param ctx the parse tree
+	 */
+	void enterBetween(RefiParser.BetweenContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link RefiParser#between}.
+	 * @param ctx the parse tree
+	 */
+	void exitBetween(RefiParser.BetweenContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link RefiParser#capture_matcher}.
 	 * @param ctx the parse tree
 	 */
@@ -120,6 +140,26 @@ public interface RefiParserListener extends ParseTreeListener {
 	 */
 	void exitExpr_param_matcher(RefiParser.Expr_param_matcherContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link RefiParser#exactly}.
+	 * @param ctx the parse tree
+	 */
+	void enterExactly(RefiParser.ExactlyContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link RefiParser#exactly}.
+	 * @param ctx the parse tree
+	 */
+	void exitExactly(RefiParser.ExactlyContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link RefiParser#flagged}.
+	 * @param ctx the parse tree
+	 */
+	void enterFlagged(RefiParser.FlaggedContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link RefiParser#flagged}.
+	 * @param ctx the parse tree
+	 */
+	void exitFlagged(RefiParser.FlaggedContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link RefiParser#flags}.
 	 * @param ctx the parse tree
 	 */
@@ -129,6 +169,16 @@ public interface RefiParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitFlags(RefiParser.FlagsContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link RefiParser#greek}.
+	 * @param ctx the parse tree
+	 */
+	void enterGreek(RefiParser.GreekContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link RefiParser#greek}.
+	 * @param ctx the parse tree
+	 */
+	void exitGreek(RefiParser.GreekContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link RefiParser#hex_matcher}.
 	 * @param ctx the parse tree
@@ -190,6 +240,16 @@ public interface RefiParserListener extends ParseTreeListener {
 	 */
 	void exitRange_matcher(RefiParser.Range_matcherContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link RefiParser#union}.
+	 * @param ctx the parse tree
+	 */
+	void enterUnion(RefiParser.UnionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link RefiParser#union}.
+	 * @param ctx the parse tree
+	 */
+	void exitUnion(RefiParser.UnionContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link RefiParser#string}.
 	 * @param ctx the parse tree
 	 */
@@ -200,16 +260,6 @@ public interface RefiParserListener extends ParseTreeListener {
 	 */
 	void exitString(RefiParser.StringContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link RefiParser#function_matcher}.
-	 * @param ctx the parse tree
-	 */
-	void enterFunction_matcher(RefiParser.Function_matcherContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link RefiParser#function_matcher}.
-	 * @param ctx the parse tree
-	 */
-	void exitFunction_matcher(RefiParser.Function_matcherContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link RefiParser#matcher_name}.
 	 * @param ctx the parse tree
 	 */
@@ -219,6 +269,26 @@ public interface RefiParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitMatcher_name(RefiParser.Matcher_nameContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link RefiParser#match_type}.
+	 * @param ctx the parse tree
+	 */
+	void enterMatch_type(RefiParser.Match_typeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link RefiParser#match_type}.
+	 * @param ctx the parse tree
+	 */
+	void exitMatch_type(RefiParser.Match_typeContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link RefiParser#alphabetic}.
+	 * @param ctx the parse tree
+	 */
+	void enterAlphabetic(RefiParser.AlphabeticContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link RefiParser#alphabetic}.
+	 * @param ctx the parse tree
+	 */
+	void exitAlphabetic(RefiParser.AlphabeticContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link RefiParser#anywild}.
 	 * @param ctx the parse tree
@@ -259,6 +329,16 @@ public interface RefiParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitBol(RefiParser.BolContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link RefiParser#currency}.
+	 * @param ctx the parse tree
+	 */
+	void enterCurrency(RefiParser.CurrencyContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link RefiParser#currency}.
+	 * @param ctx the parse tree
+	 */
+	void exitCurrency(RefiParser.CurrencyContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link RefiParser#digit}.
 	 * @param ctx the parse tree
@@ -310,6 +390,16 @@ public interface RefiParserListener extends ParseTreeListener {
 	 */
 	void exitFormfeed(RefiParser.FormfeedContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link RefiParser#latin}.
+	 * @param ctx the parse tree
+	 */
+	void enterLatin(RefiParser.LatinContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link RefiParser#latin}.
+	 * @param ctx the parse tree
+	 */
+	void exitLatin(RefiParser.LatinContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link RefiParser#newline}.
 	 * @param ctx the parse tree
 	 */
@@ -329,6 +419,16 @@ public interface RefiParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitReturn(RefiParser.ReturnContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link RefiParser#somespace}.
+	 * @param ctx the parse tree
+	 */
+	void enterSomespace(RefiParser.SomespaceContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link RefiParser#somespace}.
+	 * @param ctx the parse tree
+	 */
+	void exitSomespace(RefiParser.SomespaceContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link RefiParser#tab}.
 	 * @param ctx the parse tree
@@ -350,6 +450,16 @@ public interface RefiParserListener extends ParseTreeListener {
 	 */
 	void exitUnicodecase(RefiParser.UnicodecaseContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link RefiParser#unicodecaseoff}.
+	 * @param ctx the parse tree
+	 */
+	void enterUnicodecaseoff(RefiParser.UnicodecaseoffContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link RefiParser#unicodecaseoff}.
+	 * @param ctx the parse tree
+	 */
+	void exitUnicodecaseoff(RefiParser.UnicodecaseoffContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link RefiParser#unixlines}.
 	 * @param ctx the parse tree
 	 */
@@ -359,6 +469,26 @@ public interface RefiParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitUnixlines(RefiParser.UnixlinesContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link RefiParser#unixlinesoff}.
+	 * @param ctx the parse tree
+	 */
+	void enterUnixlinesoff(RefiParser.UnixlinesoffContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link RefiParser#unixlinesoff}.
+	 * @param ctx the parse tree
+	 */
+	void exitUnixlinesoff(RefiParser.UnixlinesoffContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link RefiParser#upper}.
+	 * @param ctx the parse tree
+	 */
+	void enterUpper(RefiParser.UpperContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link RefiParser#upper}.
+	 * @param ctx the parse tree
+	 */
+	void exitUpper(RefiParser.UpperContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link RefiParser#wild}.
 	 * @param ctx the parse tree

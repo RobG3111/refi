@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry excluding="refi/.antlr/" kind="src" output="bin" path="src"/>
-	<classpathentry kind="src" output="test/bin" path="tests/src">
+	<classpathentry kind="src" output="tests/bin" path="tests/src">
 		<attributes>
 			<attribute name="test" value="true"/>
 		</attributes>

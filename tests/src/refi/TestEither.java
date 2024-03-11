@@ -11,7 +11,7 @@ class TestEither extends BaseTest
     void testEither()
     {
 
-        String expression = refi.translate("`a` either{`b`, `c`} `d`");
+        String expression = refi.toRegEx("`a` either{`b`, `c`} `d`");
         assertEquals("a[bc]d", expression);
         assertRegexMatchesText(expression, "abd");
         assertRegexMatchesText(expression, "acd");
@@ -22,7 +22,7 @@ class TestEither extends BaseTest
     @Test
     void testEitherComplex()
     {
-        String expression = refi.translate("`a` either{`b`, `c`, `d`} `e`");
+        String expression = refi.toRegEx("`a` either{`b`, `c`, `d`} `e`");
         assertEquals("a[bcd]e", expression);
         assertRegexMatchesText(expression, "abe");
         assertRegexMatchesText(expression, "ace");

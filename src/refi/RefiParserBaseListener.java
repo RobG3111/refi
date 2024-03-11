@@ -67,6 +67,30 @@ public class RefiParserBaseListener implements RefiParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterAtleast(RefiParser.AtleastContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAtleast(RefiParser.AtleastContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterBetween(RefiParser.BetweenContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitBetween(RefiParser.BetweenContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterCapture_matcher(RefiParser.Capture_matcherContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -151,6 +175,30 @@ public class RefiParserBaseListener implements RefiParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterExactly(RefiParser.ExactlyContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitExactly(RefiParser.ExactlyContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterFlagged(RefiParser.FlaggedContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFlagged(RefiParser.FlaggedContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterFlags(RefiParser.FlagsContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -158,6 +206,18 @@ public class RefiParserBaseListener implements RefiParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitFlags(RefiParser.FlagsContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterGreek(RefiParser.GreekContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitGreek(RefiParser.GreekContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -235,6 +295,18 @@ public class RefiParserBaseListener implements RefiParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterUnion(RefiParser.UnionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitUnion(RefiParser.UnionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterString(RefiParser.StringContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -247,18 +319,6 @@ public class RefiParserBaseListener implements RefiParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFunction_matcher(RefiParser.Function_matcherContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitFunction_matcher(RefiParser.Function_matcherContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterMatcher_name(RefiParser.Matcher_nameContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -266,6 +326,30 @@ public class RefiParserBaseListener implements RefiParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitMatcher_name(RefiParser.Matcher_nameContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterMatch_type(RefiParser.Match_typeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitMatch_type(RefiParser.Match_typeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterAlphabetic(RefiParser.AlphabeticContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAlphabetic(RefiParser.AlphabeticContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -314,6 +398,18 @@ public class RefiParserBaseListener implements RefiParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitBol(RefiParser.BolContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterCurrency(RefiParser.CurrencyContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitCurrency(RefiParser.CurrencyContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -379,6 +475,18 @@ public class RefiParserBaseListener implements RefiParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterLatin(RefiParser.LatinContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLatin(RefiParser.LatinContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterNewline(RefiParser.NewlineContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -398,6 +506,18 @@ public class RefiParserBaseListener implements RefiParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitReturn(RefiParser.ReturnContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterSomespace(RefiParser.SomespaceContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitSomespace(RefiParser.SomespaceContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -427,6 +547,18 @@ public class RefiParserBaseListener implements RefiParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterUnicodecaseoff(RefiParser.UnicodecaseoffContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitUnicodecaseoff(RefiParser.UnicodecaseoffContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterUnixlines(RefiParser.UnixlinesContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -434,6 +566,30 @@ public class RefiParserBaseListener implements RefiParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitUnixlines(RefiParser.UnixlinesContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterUnixlinesoff(RefiParser.UnixlinesoffContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitUnixlinesoff(RefiParser.UnixlinesoffContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterUpper(RefiParser.UpperContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitUpper(RefiParser.UpperContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

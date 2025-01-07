@@ -83,7 +83,7 @@ Grammar
 | bol                                   | yes         | ^ The beginning of a line                                                                                                  |
 | eol                                   | yes         | $ The end of a line                                                                                                        |
 | wordboundary                          | yes         | \b A word boundary                                                                                                         |
-| nonwordboundy                         |             | \B A non-word boundary                                                                                                     |
+| nonwordboundary                       |             | \B A non-word boundary                                                                                                     |
 | begininput                            |             | \A The beginning of the input                                                                                              |
 | endmatch                              |             | \G The end of the previous match                                                                                           |
 | endinputexcept                        |             | \Z The end of the input but for the final terminator, if any                                                               |
